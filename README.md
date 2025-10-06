@@ -62,3 +62,22 @@ If you see an execution policy error, use `-ExecutionPolicy Bypass` as shown abo
 ```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ```
+
+### Windows batch wrapper
+
+Double-click to update the submodule via PowerShell:
+
+```bat
+scripts\update-submodule.bat
+```
+
+Or run from a terminal:
+
+```bat
+scripts\update-submodule.bat
+```
+
+The batch calls `scripts\update-submodule.ps1` with defaults:
+- SubmodulePath: `langchain-course`
+- SubmoduleBranch: `main`
+- Remote: `origin`
