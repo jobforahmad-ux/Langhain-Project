@@ -1,0 +1,3 @@
+[submodule "langchain-course"]
+	path = langchain-course
+	url = https://github.com/harishneel1/langchain-course.git
