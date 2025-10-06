@@ -43,3 +43,22 @@ This repository references the original course as a Git submodule at langchain-c
 
 - The submodule points to: https://github.com/harishneel1/langchain-course.git
 - This setup preserves attribution and avoids redistributing the source code directly in this repository.
+
+## Auto-update script
+
+Use the PowerShell script to update the submodule to the latest on a branch and push the change:
+
+```powershell
+# From repo root
+powershell -ExecutionPolicy Bypass -File .\scripts\update-submodule.ps1 -SubmodulePath "langchain-course" -SubmoduleBranch "main" -Remote "origin"
+```
+
+- Parameters:
+  - `-SubmodulePath`: Path of the submodule folder (default: `langchain-course`)
+  - `-SubmoduleBranch`: Branch to track in the submodule (default: `main`)
+  - `-Remote`: Superproject remote to push to (default: `origin`)
+
+If you see an execution policy error, use `-ExecutionPolicy Bypass` as shown above or temporarily run:
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
